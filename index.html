@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!-- 
+  Trabalho: Esporte Digital — Universo da Tecnologia
+  Aluno: [SEU NOME] - 3º Ano EM
+  TEMA EXTRA: Acessibilidade e Inclusão Digital
+-->
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site educativo sobre esporte digital, tecnologia e acessibilidade.">
+  
+  <title>Esporte Digital | Acessível e Inclusivo</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       BARRA DE ACESSIBILIDADE
+       Fica no topo, com botões que ajudam 
+       pessoas com diferentes necessidades
+  ========================================== -->
+  <div class="barra-acessibilidade" role="region" aria-label="Ferramentas de acessibilidade">
+    <div class="container barra-conteudo">
+      
+      <span class="barra-titulo">
+        <span aria-hidden="true">♿</span> Acessibilidade:
+      </span>
+      
+      <!-- Botões com aria-label para leitores de tela -->
+      <button 
+        class="botao-acessibilidade" 
+        id="btnAumentar" 
+        aria-label="Aumentar tamanho da fonte">
+        A+
+      </button>
+      
+      <button 
+        class="botao-acessibilidade" 
+        id="btnDiminuir" 
+        aria-label="Diminuir tamanho da fonte">
+        A−
+      </button>
+      
+      <button 
+        class="botao-acessibilidade" 
+        id="btnContraste" 
+        aria-label="Alternar alto contraste"
+        aria-pressed="false">
+        <span aria-hidden="true">🌓</span> Contraste
+      </button>
+      
+      <button 
+        class="botao-acessibilidade" 
+        id="btnDislexia" 
+        aria-label="Alternar fonte para dislexia"
+        aria-pressed="false">
+        <span aria-hidden="true">📖</span> Dislexia
+      </button>
+      
+      <button 
+        class="botao-acessibilidade" 
+        id="btnReset" 
+        aria-label="Restaurar configurações padrão">
+        <span aria-hidden="true">↺</span> Resetar
+      </button>
+      
+    </div>
+  </div>
+
+  <!-- ==========================================
+       ATALHO PARA IR AO CONTEÚDO
+       Ajuda quem usa teclado a pular o menu
+  ========================================== -->
+  <a href="#conteudo-principal" class="link-pular">
+    Pular para o conteúdo principal
+  </a>
+
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
+  <header class="cabecalho" role="banner">
+    <div class="container cabecalho-conteudo">
+      
+      <h1 class="logo">
+        <span aria-hidden="true">🎮</span> Esporte Digital
+      </h1>
+      
+      <!-- Botão do menu com aria-expanded -->
+      <button 
+        class="botao-menu" 
+        id="botaoMenu"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+      
+      <!-- Menu com role navigation -->
+      <nav class="menu" id="menu" role="navigation" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#inscricao" class="botao-destaque">Inscreva-se</a>
+      </nav>
+      
+    </div>
+  </header>
+
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+  <main id="conteudo-principal" role="main">
+
+    <!-- ==============================
+         HERO
+    ============================== -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="container">
+        
+        <span class="etiqueta">
+          <span aria-hidden="true">🎯</span> Tecnologia + Esporte
+        </span>
+        
+        <h2 class="titulo-principal" id="titulo-hero">
+          O <span class="destaque">Esporte</span> também vive no <span class="destaque">Digital</span>
+        </h2>
+        
+        <p class="subtitulo">
+          Descubra como a tecnologia transformou o mundo dos esportes: 
+          e-sports, realidade virtual, wearables e muito mais. 
+          Um universo onde <strong>todos podem competir</strong>, 
+          independentemente de suas limitações físicas.
+        </p>
+        
+        <a href="#modalidades" class="botao-principal">
+          Explorar Modalidades <span aria-hidden="true">→</span>
+        </a>
+        
+        <!-- Números com aria-live para leitores de tela -->
+        <div class="numeros" role="list" aria-label="Estatísticas sobre esporte digital">
+          
+          <div class="numero-item" role="listitem">
+            <span class="numero" data-numero="450" aria-hidden="true">0</span>
+            <span class="rotulo">
+              <span class="sr-only">450 </span>Milhões de fãs de e-sports
+            </span>
+          </div>
+          
+          <div class="numero-item" role="listitem">
+            <span class="numero" data-numero="150" aria-hidden="true">0</span>
+            <span class="rotulo">
+              <span class="sr-only">150 </span>Países participantes
+            </span>
+          </div>
+          
+          <div class="numero-item" role="listitem">
+            <span class="numero" data-numero="2027" aria-hidden="true">0</span>
+            <span class="rotulo">
+              <span class="sr-only">2027 </span>Ano dos Jogos Olímpicos de E-sports
+            </span>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ==============================
+         SOBRE
+    ============================== -->
+    <section class="secao" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="container">
+        
+        <h2 class="titulo-secao" id="titulo-sobre">O que é Esporte Digital?</h2>
+        <p class="texto-secao">
+          O esporte digital une a emoção das competições esportivas com o poder 
+          da tecnologia. <strong>Não é apenas "jogar videogame"</strong> — é treinar, 
+          competir, trabalhar em equipe e desenvolver habilidades.
+        </p>
+        
+        <div class="cards">
+          
+          <article class="card">
+            <div class="icone" aria-hidden="true">🕹️</div>
+            <h3>E-sports</h3>
+            <p>Competições profissionais de videogame com times, treinadores e premiações.</p>
+          </article>
+          
+          <article class="card">
+            <div class="icone" aria-hidden="true">🥽</div>
+            <h3>Realidade Virtual</h3>
+            <p>Óculos VR permitem treinar esportes dentro de casa, com imersão total.</p>
+          </article>
+          
+          <article class="card">
+            <div class="icone" aria-hidden="true">⌚</div>
+            <h3>Wearables</h3>
+            <p>Relógios inteligentes monitoram batimentos e ajudam atletas a evoluírem.</p>
+          </article>
+          
+          <article class="card">
+            <div class="icone" aria-hidden="true">♿</div>
+            <h3>Inclusão Digital</h3>
+            <p>Pessoas com deficiência encontram no esporte digital uma forma de competir em igualdade.</p>
+          </article>
+          
+          <article class="card">
+            <div class="icone" aria-hidden="true">🧠</div>
+            <h3>Saúde Mental</h3>
+            <p>Jogos digitais ajudam na concentração, no raciocínio e no trabalho em equipe.</p>
+          </article>
+          
+          <article class="card">
+            <div class="icone" aria-hidden="true">🌐</div>
+            <h3>Conexão Global</h3>
+            <p>Atletas digitais de todo o mundo se conectam e competem online.</p>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         MODALIDADES (interativo)
+    ============================== -->
+    <section class="secao secao-escura" id="modalidades" aria-labelledby="titulo-modalidades">
+      <div class="container">
+        
+        <h2 class="titulo-secao" id="titulo-modalidades">Modalidades de Esporte Digital</h2>
+        <p class="texto-secao texto-escuro">
+          Use os botões abaixo para explorar cada modalidade.
+        </p>
+        
+        <!-- Botões com role tablist para acessibilidade -->
+        <div class="botoes-modalidades" role="tablist" aria-label="Modalidades disponíveis">
+          
+          <button 
+            class="botao-modalidade ativo" 
+            role="tab"
+            aria-selected="true"
+            aria-controls="painelModalidade"
+            data-modalidade="fps">
+            <span aria-hidden="true">🎯</span> FPS
+          </button>
+          
+          <button 
+            class="botao-modalidade" 
+            role="tab"
+            aria-selected="false"
+            aria-controls="painelModalidade"
+            data-modalidade="moba">
+            <span aria-hidden="true">⚔️</span> MOBA
+          </button>
+          
+          <button 
+            class="botao-modalidade" 
+            role="tab"
+            aria-selected="false"
+            aria-controls="painelModalidade"
+            data-modalidade="esportes">
+            <span aria-hidden="true">⚽</span> Esportes
+          </button>
+          
+          <button 
+            class="botao-modalidade" 
+            role="tab"
+            aria-selected="false"
+            aria-controls="painelModalidade"
+            data-modalidade="estrategia">
+            <span aria-hidden="true">🧠</span> Estratégia
+          </button>
+          
+          <button 
+            class="botao-modalidade" 
+            role="tab"
+            aria-selected="false"
+            aria-controls="painelModalidade"
+            data-modalidade="vr">
+            <span aria-hidden="true">🥽</span> Realidade Virtual
+          </button>
+          
+        </div>
+        
+        <!-- Painel com aria-live para anunciar mudanças -->
+        <div 
+          class="painel-modalidade" 
+          id="painelModalidade"
+          role="tabpanel"
+          aria-live="polite">
+          
+          <h3 id="tituloModalidade">FPS — First Person Shooter</h3>
+          <p id="descricaoModalidade">
+            Jogos de tiro em primeira pessoa exigem reflexos rápidos, 
+            precisão e estratégia em equipe.
+          </p>
+          <ul id="habilidadesModalidade" class="lista-habilidades">
+            <li>Precisão e mira</li>
+            <li>Reflexos rápidos</li>
+            <li>Estratégia em equipe</li>
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ==============================
+         QUIZ
+    ============================== -->
+    <section class="secao" id="quiz" aria-labelledby="titulo-quiz">
+      <div class="container">
+        
+        <h2 class="titulo-secao" id="titulo-quiz">Quiz: Você conhece o Esporte Digital?</h2>
+        <p class="texto-secao">Responda as 5 perguntas e descubra sua pontuação!</p>
+        
+        <div class="quiz" role="form" aria-label="Quiz sobre esporte digital">
+          
+          <!-- Pergunta 1 -->
+          <fieldset class="pergunta" data-resposta="b">
+            <legend>1. O que são e-sports?</legend>
+            <button type="button" class="opcao" data-opcao="a">a) Esportes praticados apenas em academias</button>
+            <button type="button" class="opcao" data-opcao="b">b) Competições profissionais de videogame</button>
+            <button type="button" class="opcao" data-opcao="c">c) Um tipo de corrida de rua</button>
+          </fieldset>
+          
+          <!-- Pergunta 2 -->
+          <fieldset class="pergunta" data-resposta="c">
+            <legend>2. Qual tecnologia monitora batimentos cardíacos durante o exercício?</legend>
+            <button type="button" class="opcao" data-opcao="a">a) Realidade Virtual</button>
+            <button type="button" class="opcao" data-opcao="b">b) Streaming</button>
+            <button type="button" class="opcao" data-opcao="c">c) Wearables (relógios inteligentes)</button>
+          </fieldset>
+          
+          <!-- Pergunta 3 -->
+          <fieldset class="pergunta" data-resposta="a">
+            <legend>3. Counter-Strike e Valorant são exemplos de qual gênero?</legend>
+            <button type="button" class="opcao" data-opcao="a">a) FPS (First Person Shooter)</button>
+            <button type="button" class="opcao" data-opcao="b">b) MOBA</button>
+            <button type="button" class="opcao" data-opcao="c">c) Estratégia em tempo real</button>
+          </fieldset>
+          
+          <!-- Pergunta 4 -->
+          <fieldset class="pergunta" data-resposta="b">
+            <legend>4. O que a sigla VR significa?</legend>
+            <button type="button" class="opcao" data-opcao="a">a) Video Recording</button>
+            <button type="button" class="opcao" data-opcao="b">b) Virtual Reality (Realidade Virtual)</button>
+            <button type="button" class="opcao" data-opcao="c">c) Very Rapid</button>
+          </fieldset>
+          
+          <!-- Pergunta 5 -->
+          <fieldset class="pergunta" data-resposta="c">
+            <legend>5. Qual habilidade NÃO é típica dos atletas digitais?</legend>
+            <button type="button" class="opcao" data-opcao="a">a) Reflexos rápidos</button>
+            <button type="button" class="opcao" data-opcao="b">b) Trabalho em equipe</button>
+            <button type="button" class="opcao" data-opcao="c">c) Força física extrema</button>
+          </fieldset>
+          
+        </div>
+        
+        <!-- Resultado com aria-live para leitor de tela -->
+        <div 
+          class="resultado-quiz" 
+          id="resultadoQuiz"
+          role="status"
+          aria-live="polite">
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ==============================
+         INSCRIÇÃO
+    ============================== -->
+    <section class="secao secao-clara" id="inscricao" aria-labelledby="titulo-inscricao">
+      <div class="container">
+        
+        <h2 class="titulo-secao" id="titulo-inscricao">Inscreva-se no Torneio Digital</h2>
+        <p class="texto-secao">Participe do torneio virtual da sua escola!</p>
+        
+        <form class="formulario" id="formulario" novalidate>
+          
+          <div class="campo">
+            <label for="nome">Nome completo *</label>
+            <input 
+              type="text" 
+              id="nome" 
+              name="nome"
+              placeholder="Digite seu nome" 
+              required
+              aria-required="true"
+              autocomplete="name">
+          </div>
+          
+          <div class="campo">
+            <label for="email">E-mail *</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              placeholder="seuemail@exemplo.com" 
+              required
+              aria-required="true"
+              autocomplete="email">
+          </div>
+          
+          <div class="campo">
+            <label for="idade">Idade *</label>
+            <input 
+              type="number" 
+              id="idade" 
+              name="idade"
+              placeholder="Ex: 17" 
+              min="10" 
+              max="99" 
+              required
+              aria-required="true">
+          </div>
+          
+          <div class="campo">
+            <label for="modalidade">Modalidade preferida *</label>
+            <select id="modalidade" name="modalidade" required aria-required="true">
+              <option value="">Selecione...</option>
+              <option value="fps">FPS</option>
+              <option value="moba">MOBA</option>
+              <option value="esportes">Esportes</option>
+              <option value="estrategia">Estratégia</option>
+              <option value="vr">Realidade Virtual</option>
+            </select>
+          </div>
+          
+          <div class="campo">
+            <label for="experiencia">Nível de experiência *</label>
+            <select id="experiencia" name="experiencia" required aria-required="true">
+              <option value="">Selecione...</option>
+              <option value="iniciante">Iniciante</option>
+              <option value="intermediario">Intermediário</option>
+              <option value="avancado">Avançado</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="botao-principal">
+            Confirmar Inscrição <span aria-hidden="true">🎮</span>
+          </button>
+          
+        </form>
+        
+        <!-- Mensagem de sucesso com aria-live -->
+        <div 
+          class="mensagem-sucesso" 
+          id="mensagemSucesso"
+          role="alert"
+          aria-live="assertive">
+          <p><span aria-hidden="true">✅</span> Inscrição confirmada com sucesso!</p>
+          <p id="detalhesInscricao"></p>
+          <p>Boa sorte no torneio! <span aria-hidden="true">🏆</span></p>
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       RODAPÉ
+  ============================== -->
+  <footer class="rodape" role="contentinfo">
+    <div class="container">
+      <p>© 2026 Esporte Digital — Projeto Escolar Acessível</p>
+      <p>Desenvolvido por [SEU NOME] — 3º Ano do Ensino Médio</p>
+      <p class="rodape-acessibilidade">
+        <span aria-hidden="true">♿</span> 
+        Este site foi desenvolvido seguindo as diretrizes de acessibilidade WCAG 2.1
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
